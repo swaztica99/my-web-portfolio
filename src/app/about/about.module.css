@@ -1,0 +1,138 @@
+.main {
+    background-color: #1111;
+    max-height: 100vh;
+    color: white;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 0;
+}
+
+/* --- LOGIC DESKTOP --- */
+.textSide {
+    order: 1;
+    /* MEMAKSA TEKS KE KOLOM PERTAMA (KIRI) */
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+}
+
+.imageSide {
+    order: 2;
+    /* MEMAKSA GAMBAR KE KOLOM KEDUA (KANAN) */
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.desktopTitle {
+    font-size: clamp(50px, 8vw, 85px);
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.mobileTitle {
+    display: none;
+}
+
+.blueDecoration {
+    display: none;
+}
+
+.description {
+    color: #a0a0a0;
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.profileImg {
+    height: 85vh;
+    width: auto;
+    filter: grayscale(100%);
+    z-index: 2;
+    object-fit: contain;
+    display: block;
+}
+
+/* --- LOGIC MOBILE (Sesuai Desain Figma Sebelumnya) --- */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 100px 20px 60px 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* Atur Urutan Mobile: Judul -> Gambar -> Teks */
+    .mobileTitle {
+        display: block;
+        order: 1;
+        font-size: 70px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .imageSide {
+        order: 2;
+        height: 350px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textSide {
+        order: 3;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .blueDecoration {
+        display: block;
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background: #0047FF;
+        filter: blur(40px);
+        opacity: 0.6;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .profileImg {
+        height: 320px;
+        margin-top: 110px;
+        filter: grayscale(100%);
+    }
+
+    .desktopTitle {
+        display: none;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+}

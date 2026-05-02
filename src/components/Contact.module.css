@@ -1,0 +1,69 @@
+.contact {
+    padding: 100px 20px;
+    background-color: #1111;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #a0a0a0;
+    margin-bottom: 50px;
+}
+
+.card {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btnGroup {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.waBtn,
+.emailBtn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.waBtn {
+    background: #25d366;
+    /* Hijau WA */
+    color: white;
+}
+
+.emailBtn {
+    background: white;
+    color: black;
+}
+
+.waBtn:hover {
+    background: #16813d;
+    color: white;
+}
+
+.emailBtn:hover {
+    background: rgb(199, 199, 199);
+    color: black;
+}
+
+.waBtn,
+.emailBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Jarak antara icon dan teks */
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}

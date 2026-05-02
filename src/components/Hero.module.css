@@ -1,0 +1,97 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+    /* Warna dasar jika gambar gagal dimuat */
+}
+
+/* Ganti bgVideo dengan bgImage */
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Penting! */
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Gelapkan video agar teks putih terlihat tajam */
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    /* Pastikan teks di atas video dan overlay */
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    /* MEMBUAT SEMUA TEKS KE TENGAH */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(40px, 6vw, 100px);
+    /* Responsif: besar di desktop, kecil di HP */
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: white;
+    letter-spacing: -2px;
+}
+
+.description {
+    color: #d1d1d1;
+    max-width: 700px;
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
+    line-height: 1.4;
+    margin-bottom: 45px;
+}
+
+.button {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background: #f0f0f0;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Penyesuaian untuk Mobile */
+@media (max-width: 768px) {
+    .title {
+        letter-spacing: -1px;
+    }
+}

@@ -1,0 +1,116 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background: #111111;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.links {
+    display: flex;
+    gap: 40px;
+}
+
+.link {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: white;
+}
+
+/* HAMBURGER STYLES */
+.hamburger {
+    display: none;
+    /* Sembunyi di desktop */
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.bar,
+.barOpen {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logoImg {
+    object-fit: contain;
+    /* Menjaga logo tidak gepeng */
+    max-height: 50px;
+    /* Batasi tinggi agar tidak menyentuh pinggir navbar */
+    width: auto;
+    /* Lebar otomatis menyesuaikan tinggi */
+}
+
+/* RESPONSIVE NAVBAR (MOBILE) */
+@media (max-width: 768px) {
+    .nav {
+        padding: 0 30px;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    /* Animasi X saat menu buka */
+    .barOpen:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .barOpen:nth-child(2) {
+        opacity: 0;
+    }
+
+    .barOpen:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .links {
+        position: fixed;
+        right: -100%;
+        /* Sembunyi di kanan luar layar */
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        background: #1e1e1e;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .links.active {
+        right: 0;
+        /* Geser ke dalam layar */
+    }
+
+    .logoImg {
+        max-height: 40px;
+    }
+}

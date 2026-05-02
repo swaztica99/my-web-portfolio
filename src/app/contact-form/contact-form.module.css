@@ -1,0 +1,82 @@
+.main {
+    background: #1111;
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 150px 20px;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.desc {
+    text-align: center;
+    color: #a0a0a0;
+    margin-bottom: 40px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    background: #252525;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+}
+
+.submitBtn {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.submitBtn:hover {
+    background: #ccc;
+}
+
+.successMessage {
+    text-align: center;
+    padding: 40px;
+    background: #252525;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+.successMessage h2 {
+    margin-bottom: 10px;
+}
+
+.successMessage p {
+    color: #a0a0a0;
+    margin-bottom: 30px;
+}
