@@ -35,7 +35,8 @@ export default function Hero() {
                     >
                         Saya membantu bisnis Anda berkembang dengan website modern,
                         responsif, dan berperforma tinggi yang dirancang untuk
-                        meningkatkan kepercayaan dan konversi.
+                        meningkatkan kepercayaan dan konversi. Mulai konsultasi gratis sekarang
+                        untuk mendapatkan penawaran terbaik Anda.
                     </motion.p>
 
                     <motion.div
