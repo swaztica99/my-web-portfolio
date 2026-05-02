@@ -1,0 +1,206 @@
+.section {
+    padding: 120px 20px;
+    background-color: #1111;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.subtitle {
+    color: #888;
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- SLIDER STYLES --- */
+.sliderWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    /* Memungkinkan geser */
+    scroll-behavior: smooth;
+    padding: 20px 0;
+
+    /* Sembunyikan scrollbar bawaan */
+    -ms-overflow-style: none;
+    /* IE dan Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, dan Opera */
+}
+
+.card {
+    flex: 0 0 380px;
+    /* Lebar card tetap, tidak mengecil */
+    position: relative;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #252525;
+}
+
+/* --- TOMBOL NAVIGASI --- */
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.navBtn:hover {
+    background: #0047FF;
+    color: white;
+}
+
+.leftBtn {
+    left: -25px;
+    /* Sedikit keluar dari kontainer agar estetik */
+}
+
+.rightBtn {
+    right: -25px;
+}
+
+/* --- HOVER EFFECTS (TETAP SAMA SEPERTI SEBELUMNYA) --- */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+    filter: grayscale(100%) brightness(0.7);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+}
+
+.card:hover .image {
+    filter: grayscale(0%) brightness(0.5);
+    transform: scale(1.1);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.textInfo {
+    margin-bottom: 25px;
+}
+
+.category {
+    color: #0047FF;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.itemTitle {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 5px;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 15px;
+}
+
+.pesanBtn,
+.visitBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pesanBtn {
+    background-color: white;
+    color: black;
+}
+
+.visitBtn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pesanBtn:hover {
+    background: #0047FF;
+    color: white;
+}
+
+.visitBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 300px;
+    }
+
+    /* Sedikit dikecilkan di mobile */
+    .navBtn {
+        display: none;
+    }
+
+    /* Di mobile sembunyikan tombol karena user bisa swipe jari */
+    .overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

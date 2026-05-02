@@ -1,0 +1,83 @@
+.section {
+    padding: 120px 20px;
+    background-color: #1111;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.label {
+    color: #0047FF;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.brand {
+    color: #0047FF;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #252525;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.iconBox {
+    color: #0047FF;
+    margin-bottom: 25px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #a0a0a0;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 20px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
