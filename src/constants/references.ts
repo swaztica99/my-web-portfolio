@@ -18,7 +18,7 @@ export const REFERENCES = [
         title: "Modern Coffee Shop",
         category: "Landing Page",
         image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800",
-        url: "kopi-kita-project-1.vercel.app",
+        url: "https://kopi-kita-project-1.vercel.app/",
     },
     {
         id: 4,
