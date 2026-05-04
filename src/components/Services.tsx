@@ -13,14 +13,13 @@ export default function Services() {
     return (
         <section id="services" className={styles.services}>
             <div className={styles.container}>
-                <h2 className={styles.sectionTitle}>Pilih Paket Website</h2>
+                <h2 className={styles.sectionTitle}>Layanan Saya</h2>
                 <div className={styles.grid}>
                     {services.map((s) => (
-                        <Link href={`/services/${s.slug}`} key={s.slug} className={styles.card}>
+                        <Link href={`#${s.slug}`} key={s.slug} className={styles.card}>
                             <div className={styles.icon}>{s.icon}</div>
                             <h3 className={styles.cardTitle}>{s.title}</h3>
                             <p className={styles.cardDesc}>{s.desc}</p>
-                            <span className={styles.learnMore}>Lihat Detail Paket →</span>
                         </Link>
                     ))}
                 </div>
