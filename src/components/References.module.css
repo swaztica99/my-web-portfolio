@@ -58,7 +58,7 @@
 }
 
 .card {
-    flex: 0 0 380px;
+    flex: 0 0 600px;
     /* Lebar card tetap, tidak mengecil */
     position: relative;
     height: 350px;
