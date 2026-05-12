@@ -10,6 +10,13 @@ export const REFERENCES = [
         id: 2,
         title: "References 2",
         category: "Landing Page",
+        image: "/webpage4.png",
+        url: "https://website-ccaffee-2.vercel.app/",
+    },
+    {
+        id: 3,
+        title: "References 3",
+        category: "Landing Page",
         image: "/webpage3.png",
         url: "https://coffee-website-1-wine.vercel.app/",
     }
